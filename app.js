@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 const router = express.Router();
 
-app.listen(1234, () =>
+app.listen(process.env.PORT || 1234, () =>
   console.log("Server is running on http://localhost:1234")
 );
 
