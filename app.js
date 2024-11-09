@@ -3,7 +3,7 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const request = require("request");
-import serverless from "serverless-http";
+const serverless = require("serverless-http");
 
 const app = express();
 app.use(express.static("public"));
@@ -32,7 +32,3 @@ app.post("/", function (req, res) {
 
   res.send("hello");
 });
-
-// anon:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR3Z21raGhxdnV5ZmFrd3NzenBoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzExMjU1MTgsImV4cCI6MjA0NjcwMTUxOH0.NJtDAaNX-e4EEEHxiMB4JOQMwcPAQblGvNAM0etJnLM
-
-// service : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR3Z21raGhxdnV5ZmFrd3NzenBoIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczMTEyNTUxOCwiZXhwIjoyMDQ2NzAxNTE4fQ.3FQ4zgfeXlMTM3Uq20XFX0u_BsWHmC-J_MsIdyhoIks
