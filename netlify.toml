@@ -1,9 +1,2 @@
 [build]
-  command="npm run build"
-  publish="/build"
-  base ="/"
-[[redirects]]
-  force = true
-  from = "/*"
-  status = 200
-  to = "/app.js"
+  functions="functions"

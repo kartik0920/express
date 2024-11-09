@@ -14,12 +14,12 @@ app.listen(process.env.PORT || 1234, () =>
   console.log("Server is running on http://localhost:1234")
 );
 
-app.get("/", function (req, res) {
+router.get("/", function (req, res) {
   console.log("good");
   res.sendFile(__dirname + "/signup.html");
 });
 
-app.post("/", function (req, res) {
+router.post("/", function (req, res) {
   var firstName = req.body.fname;
   var lastName = req.body.lname;
   var emails = req.body.email;
@@ -32,3 +32,6 @@ app.post("/", function (req, res) {
 
   res.send("hello");
 });
+
+app.use("/.netlify/function.api", router);
+module.exports.handler = serverless(app);
